@@ -1,5 +1,5 @@
 # Project Title
-![image](images/White Modern Minimalist Signature Brand Logo.png) 
+![images](images/White Modern Minimalist Signature Brand Logo.png) 
 
 Hey patients, thank you for clicking to Medi hub care hospital.
 
@@ -12,7 +12,7 @@ MEDI HUB APP
 
 **Stellarawat Waithira Njuguna.**
 
-![image](images/White Modern Minimalist Signature Brand Logo (1).png)
+![images](images/White Modern Minimalist Signature Brand Logo (1).png)
 
 # Description
 MediHub Medical Care is a comprehensive healthcare facility dedicated to providing high-quality medical services to the community. At MediHub, we prioritize patient-centric care, combining advanced medical technology with compassionate service to ensure the best outcomes for our patients.
@@ -30,13 +30,14 @@ At MediHub, we believe in the importance of preventive care and wellness educati
 
 # Setup
 At Medi hub care app,you will be able to;
-    -login and sign up. 
 
-    -you can input your condition and how you are feeling.
+-login and sign up. 
 
-    -that will help you out on your condition.
+-you can input your condition and how you are feeling.
 
-    -give you strategic solution to your problem.
+-that will help you out on your condition.
+
+-give you strategic solution to your problem.
 
 
 ## link to a live site on github:⛓️
