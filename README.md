@@ -1,4 +1,4 @@
-![images](images/White Modern Minimalist Signature Brand Logo.jpg) 
+![images](images/White Modern Minimalist Signature Brand Logo.png) 
 
 # Project Title
 
@@ -12,7 +12,7 @@ MEDI HUB APP
 
 **Stellarawat Waithira Njuguna.**
 
-![images](images/White Modern Minimalist Signature Brand Logo (1).jpg)
+![images](images/Cool Typographic Design Agency Vibes Brand Logo.jpg)
 
 # Description 🎞️
 MediHub Medical Care is a comprehensive healthcare facility dedicated to providing high-quality medical services to the community. At MediHub, we prioritize patient-centric care, combining advanced medical technology with compassionate service to ensure the best outcomes for our patients.
