@@ -14,7 +14,7 @@ MEDI HUB APP
 
 ![images](images/White Modern Minimalist Signature Brand Logo (1).jpg)
 
-# Description
+# Description 🎞️
 MediHub Medical Care is a comprehensive healthcare facility dedicated to providing high-quality medical services to the community. At MediHub, we prioritize patient-centric care, combining advanced medical technology with compassionate service to ensure the best outcomes for our patients.
 
 Our services encompass a wide range of specialties, including primary care, cardiology, orthopedics, pediatrics, emergencies and women's health. We offer state-of-the-art diagnostic facilities, including imaging and laboratory services, to support accurate and timely diagnoses.
@@ -40,11 +40,11 @@ At Medi hub care app,you will be able to;
 -give you strategic solution to your problem.
 
 
-## link to a live site on github:⛓️
+# link to a live site on github:⛓️
 
 [github](https://github.com/stellarawat/my-final-project?tab=readme-ov-file)
 
 
-# License
+# License 💀
 
 [License](License)
