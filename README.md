@@ -10,6 +10,7 @@ MEDI HUB APP
 # Author name
 
 **Stellarawat Waithira Njuguna.**
+
 ![image](<images/Cool Typographic Design Agency Vibes Brand Logo.jpg>)
 
 # Description 🎞️
@@ -23,9 +24,6 @@ In addition to our in-house services, MediHub Medical Care provides a robust tel
 
 At MediHub, we believe in the importance of preventive care and wellness education. We offer various programs and workshops focused on lifestyle management, nutrition, and disease prevention to help our patients lead healthier lives.
 
-
-
-
 # Setup
 At Medi hub care app,you will be able to;
 
@@ -37,11 +35,9 @@ At Medi hub care app,you will be able to;
 
 -give you strategic solution to your problem.
 
-
 # link to a live site on github:⛓️
 
 [github](https://github.com/stellarawat/my-final-project?tab=readme-ov-file)
-
 
 # License 
 
