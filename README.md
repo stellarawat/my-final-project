@@ -1,5 +1,4 @@
-![images](images/White Modern Minimalist Signature Brand Logo.png) 
-
+![image](<images/White Modern Minimalist Signature Brand Logo.png>)
 # Project Title
 
 Hey patients, thank you for clicking to Medi hub care hospital.
@@ -11,8 +10,7 @@ MEDI HUB APP
 # Author name
 
 **Stellarawat Waithira Njuguna.**
-
-![images](images/Cool Typographic Design Agency Vibes Brand Logo.jpg)
+![image](<images/Cool Typographic Design Agency Vibes Brand Logo.jpg>)
 
 # Description 🎞️
 MediHub Medical Care is a comprehensive healthcare facility dedicated to providing high-quality medical services to the community. At MediHub, we prioritize patient-centric care, combining advanced medical technology with compassionate service to ensure the best outcomes for our patients.
@@ -45,6 +43,6 @@ At Medi hub care app,you will be able to;
 [github](https://github.com/stellarawat/my-final-project?tab=readme-ov-file)
 
 
-# License 💀
+# License 
 
 [License](License)
