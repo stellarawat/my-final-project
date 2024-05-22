@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule New Appointment</title>
+    <link rel="stylesheet" href="schedule.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div >
+                <p>
+                    medihub
+                </p>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="C:\Users\user\OneDrive\Desktop\login\homepage.html">Home</a></li>
+                    <li><a href="C:\Users\user\OneDrive\Desktop\login\services.html">Services</a></li>
+                    <li><a href="C:\Users\user\OneDrive\Desktop\login\contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Schedule New Appointment</h1>
+            <form id="appointment-form">
+                <section>
+                    <h2>Patient Information</h2>
+                    <div class="form-group">
+                        <label for="patient-name">Name</label>
+                        <input type="text" id="patient-name" name="patient-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact Information</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    </div>
+                </section>
+                <section>
+                    <h2>Appointment Details</h2>
+                    <div class="form-group">
+                        <label for="department">Select Department</label>
+                        <select id="department" name="department" required>
+                            <option value="cardiology">Cardiology</option>
+                            <option value="neurology">Neurology</option>
+                            <option value="orthopedics">Orthopedics</option>
+                            <option value="pediatrics">Pediatrics</option>
+                            <option value="general">General</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor">Select Doctor</label>
+                        <select id="doctor" name="doctor" required>
+                            <!-- Options will be dynamically populated based on department selection -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-date">Appointment Date</label>
+                        <input type="date" id="appointment-date" name="appointment-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-time">Appointment Time</label>
+                        <input type="time" id="appointment-time" name="appointment-time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">Reason for Visit</label>
+                        <textarea id="reason" name="reason" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="medical-documents">Upload Medical Documents</label>
+                        <input type="file" id="medical-documents" name="medical-documents" multiple>
+                    </div>
+                </section>
+                <section>
+                    <h2>Additional Options</h2>
+                    <div class="form-group">
+                        <label for="mode-of-consultation">Preferred Mode of Consultation</label>
+                        <div class="radio-group">
+                            <input type="radio" id="video" name="consultation-mode" value="video" required>
+                            <label for="video">Video Call</label>
+                            <input type="radio" id="phone" name="consultation-mode" value="phone">
+                            <label for="phone">Phone Call</label>
+                            <input type="radio" id="in-person" name="consultation-mode" value="in-person">
+                            <label for="in-person">In-Person</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="insurance">Insurance Information</label>
+                        <input type="text" id="insurance" name="insurance" placeholder="Insurance Provider" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="special-requests">Special Requests</label>
+                        <textarea id="special-requests" name="special-requests" rows="2"></textarea>
+                    </div>
+                </section>
+                <section>
+                    <h2>Confirmation</h2>
+                    <div class="form-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#">terms and conditions</a></label>
+                    </div>
+                    <button type="submit">Submit</button>
+                </section>
+            </form>
+            <aside>
+                <div class="upcoming-appointments">
+                    <h3>Upcoming Appointments</h3>
+                    <ul>
+                        <li>Dr. Smith - Cardiology - May 25, 2024 - 10:00 AM</li>
+                        <li>Dr. Doe - Neurology - May 27, 2024 - 2:00 PM</li>
+                        <!-- More appointments -->
+                    </ul>
+                </div>
+                <div class="doctor-availability">
+                    <h3>Doctor's Availability</h3>
+                    <div id="calendar"></div>
+                    <!-- Calendar with doctor's available slots -->
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; Medihub.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
