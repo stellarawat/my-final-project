@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Page</title>
+    <link rel="stylesheet" href="billing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Virtual Hospital</h1>
+        </header>
+        <main>
+            <section class="billing-info">
+                <h2>Billing Information</h2>
+                <p>Review and complete your payment below.</p>
+                <div class="billing-summary">
+                    <div class="summary-item">
+                        <span class="summary-title">Patient Name:</span>
+                        <span class="summary-value">John Doe</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-title">Amount Due:</span>
+                        <span class="summary-value">$200.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-title">Service Date:</span>
+                        <span class="summary-value">May 20, 2024</span>
+                    </div>
+                </div>
+                <form action="/submit-payment" method="POST">
+                    <div class="form-group">
+                        <label for="patient-name">Patient Name</label>
+                        <input type="text" id="patient-name" name="patientName" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="billing-amount">Amount Due</label>
+                        <input type="text" id="billing-amount" name="billingAmount" value="$200.00" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" name="cardNumber" placeholder="1234 5678 9123 4567" pattern="\d{4} \d{4} \d{4} \d{4}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry-date">Expiry Date</label>
+                        <input type="text" id="expiry-date" name="expiryDate" placeholder="MM/YY" pattern="\d{2}/\d{2}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="123" pattern="\d{3}" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Submit Payment</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Virtual Hospital. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

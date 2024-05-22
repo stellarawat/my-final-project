@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>medi hub</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" />
+
+    <!-- Styles -->
+    <style>
+        body {
+            overflow-x: hidden;
+            font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            transition: background 2s ease;
+        }
+
+        .full-height {
+            height: 100vh;
+        }
+
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .position-ref {
+            position: relative;
+        }
+
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
+
+        .content {
+            text-align: center;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .title {
+            font-size: 100px;
+            letter-spacing: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            color: #00fffc;
+        }
+
+        a {
+            color: #00fffc;
+            padding: 0 25px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .m-b-md {
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .bg_img {
+            background-image: url("bgimages/be2c40a7b138890737d7bb9edfa12dd4.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .bg_img::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: black;
+            opacity: 50%;
+        }
+
+        .nav {
+            color: #00fffc;
+            position: absolute;
+            top: 5px;
+            left: 50px;
+            letter-spacing: 5px;
+            z-index: 5;
+            font-family: cursive;
+            cursor: pointer;
+        }
+
+        .footer {
+            color: #00fffc;
+            opacity: 60%;
+            position: absolute;
+            bottom: 5px;
+            left: 50px;
+            letter-spacing: 5px;
+            z-index: 5;
+            font-family: cursive;
+        }
+
+        .sub_footer {
+            color: #00fffc;
+            opacity: 60%;
+            position: absolute;
+            bottom: 5px;
+            right: 50px;
+            letter-spacing: 5px;
+            z-index: 5;
+            font-family: cursive;
+        }
+
+        .link_btn {
+            border: 1px solid #00fffc;
+            padding: 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .link_btn:hover {
+            background-color: #00fffc;
+            transition: 0.5s ease-out;
+        }
+
+        .link_btn:hover a {
+            color: #000;
+            transition: 0.5s ease-out;
+        }
+
+        .content_p_tag {
+            color: #aaa;
+            letter-spacing: 2px;
+            font-style: italic;
+        }
+
+        .p_tag_wrapper {
+            width: 50%;
+            height: 100px;
+            margin: 10px auto;
+        }
+
+        .links {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg_img">
+    <div class="flex-center position-ref full-height">
+        <p class="nav">medihub</p>
+        <div class="content">
+            <div class="title m-b-md">Medi Hub</div>
+            <div class="p_tag_wrapper">
+                <p class="content_p_tag">
+                    Your health, Our priority
+                </p>
+            </div>
+            <div class="links">
+                <!-- For more projects: Visit NetGO+  -->
+                <span class="link_btn">
+                    <a href="C:\Users\stell\OneDrive\Desktop\login\login\Toggle Login form Source code\Multi-theme login.html">Log In</a>
+                </span>
+                <span class="link_btn">
+                    <a href="C:\Users\stell\OneDrive\Desktop\login\login\register.html">Register</a>
+                </span>
+            </div>
+        </div>
+        <p class="footer">Copyright 2024 | @medihub</p>
+        <p class="sub_footer">Powered by @StellaWaithesh</p>
+    </div>
+</body>
+</html>

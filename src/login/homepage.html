@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediHub</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      overflow-x: hidden;
+      font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      transition: background 2s ease;
+    }
+
+    body.day {
+      background: #fff;
+      color: #000;
+      transition: background 2s ease;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      border: none;
+    }
+
+    .navbar-brand,
+    .navbar-nav li a {
+      line-height: 60px;
+      height: 60px;
+      padding-top: 0;
+    }
+
+    .jumbotron {
+      background: linear-gradient(180deg, transparent, #00fffc);
+      color: #fff;
+      text-align: center;
+      padding: 150px 25px;
+      margin-bottom: 0;
+    }
+
+    .dayNight {
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .dayNight input {
+      display: none;
+    }
+
+    .dayNight input + div {
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      position: relative;
+      box-shadow: inset 16px -16px 0 0 #fff;
+      transform: scale(1) rotate(-2deg);
+      transition: box-shadow 0.5s ease 0s, transform 0.4s ease 0.1s;
+    }
+
+    .dayNight input + div:before {
+      content: "";
+      width: inherit;
+      height: inherit;
+      border-radius: inherit;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: background 0.3s ease;
+    }
+
+    .dayNight input + div:after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin: -4px 0 0 -4px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      box-shadow: 0 -23px 0 #ffff00, 0 23px 0 #ffff00,
+        23px 0 0 #ffff00, -23px 0 0 #ffff00, 15px 15px 0 #ffff00,
+        -15px 15px 0 #ffff00, 15px -15px 0 #ffff00, -15px -15px 0 #ffff00;
+      transform: scale(0);
+      transition: all 0.3s ease;
+    }
+
+    .dayNight input:checked + div {
+      box-shadow: inset 32px -32px 0 0 #fff;
+      transform: scale(0.5) rotate(0deg);
+      transition: transform 0.3s ease 0.1s, box-shadow 0.2s ease 0s;
+    }
+
+    .dayNight input:checked + div:before {
+      background: #ffff00;
+      transition: background 0.3s ease 0.1s;
+    }
+
+    .dayNight input:checked + div:after {
+      transform: scale(1.5);
+      transition: transform 0.5s ease 0.15s;
+    }
+
+    .container-fluid {
+      padding: 60px 50px;
+    }
+
+    .container-fluid h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    .container-fluid p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .navbar-default {
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    .navbar-default .navbar-nav>li>a,
+    .navbar-default .navbar-brand {
+      color: #fff;
+    }
+
+    .navbar-default .navbar-nav>li>a:hover,
+    .navbar-default .navbar-brand:hover {
+      color: #00fffc;
+    }
+
+    .panel {
+      border: 1px solid #00fffc;
+      border-radius: 0;
+      transition: box-shadow 0.5s;
+    }
+
+    .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0, 255, 252, 0.5);
+    }
+
+    .panel-heading {
+      color: #fff !important;
+      background-color: #00fffc !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .panel-footer {
+      background-color: white !important;
+    }
+
+    .panel-footer h3 {
+      font-size: 32px;
+    }
+
+    .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #00fffc;
+      color: #fff;
+    }
+
+    footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #00fffc;
+    }
+
+    .slideanim {
+      visibility: hidden;
+    }
+
+    .slide {
+      animation-name: slide;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      visibility: visible;
+    }
+
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <label class="dayNight">
+    <input type="checkbox">
+    <div></div>
+  </label>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#myPage">MediHub</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron text-center">
+    <h1>Welcome to MediHub</h1>
+    <p>Your Health, Our Priority</p>
+  </div>
+
+  <div id="about" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>About MediHub</h2>
+        <p>MediHub is dedicated to providing the best healthcare services to our community. Our state-of-the-art facilities and experienced professionals ensure that you receive the highest quality care.</p>
+        <p>We offer a wide range of medical services to meet all your healthcare needs.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-signal logo slideanim"></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="services" class="container-fluid text-center">
+    <h2>Services</h2>
+    <h4>What we offer</h4>
+    <br>
+    <div class="row slideanim">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-heart logo-small"></span>
+        <h4>Cardiology</h4>
+        <p>Heart care services</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-eye-open logo-small"></span>
+        <h4>Ophthalmology</h4>
+        <p>Eye care services</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-education logo-small"></span>
+        <h4>Pediatrics</h4>
+        <p>Child care services</p>
+      </div>
+    </div>
+    <br><br>
+    <div class="row slideanim">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-cutlery logo-small"></span>
+        <h4>Nutrition</h4>
+        <p>Diet and nutrition services</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-user logo-small"></span>
+        <h4>General Health</h4>
+        <p>General health check-ups</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-earphone logo-small"></span>
+        <h4>Emergency</h4>
+        <p>24/7 emergency services</p>
+      </div>
+    </div>
+  </div>
+
+      
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <p>© 2024 MediHub. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script>
+    $('.dayNight input').change(function () {
+      $('body').toggleClass('day', $(this).is(':checked'));
+    });
+
+    $(window).scroll(function () {
+      $(".slideanim").each(function () {
+        var pos = $(this).offset().top;
+
+        var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
