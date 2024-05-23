@@ -1,4 +1,3 @@
-// Ensure JavaScript file is loaded
 console.log("login.js is loaded");
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -7,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Get the form element
     const loginForm = document.getElementById('loginForm');
 
-    // Add event listener for form submission
     loginForm.addEventListener('submit', function(event) {
         event.preventDefault();
         console.log("Form submission intercepted");
@@ -25,10 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // Dummy authentication check
         if (email === 'stella@gmail.com' && password === 'password') {
             alert('Login successful!');
-            window.location.href = 'home.html'; // Redirect to home page
+            window.location.href = 'home.html'; 
         } else {
             alert('Invalid email or password.');
         }

@@ -17,6 +17,10 @@
                 <h2>Billing Information</h2>
                 <p>Review and complete your payment below.</p>
                 <div class="billing-summary">
+                <section class="billing-info">
+                <h2>Billing Information</h2>
+                <p>Review and complete your payment below.</p>
+                <div class="billing-summary">
                     <div class="summary-item">
                         <span class="summary-title">Patient Name:</span>
                         <span class="summary-value">John Doe</span>
@@ -30,14 +34,14 @@
                         <span class="summary-value">May 20, 2024</span>
                     </div>
                 </div>
-                <form action="/submit-payment" method="POST">
+                <form id="billingForm">
                     <div class="form-group">
                         <label for="patient-name">Patient Name</label>
                         <input type="text" id="patient-name" name="patientName" placeholder="John Doe" required>
                     </div>
                     <div class="form-group">
                         <label for="billing-amount">Amount Due</label>
-                        <input type="text" id="billing-amount" name="billingAmount" value="ksh." required>
+                        <input type="text" id="billing-amount" name="billingAmount" value="ksh. " required>
                     </div>
                     <div class="form-group">
                         <label for="card-number">Card Number</label>

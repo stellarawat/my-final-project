@@ -1,4 +1,3 @@
-// Ensure JavaScript file is loaded
 console.log("register.js is loaded");
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -35,8 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // Dummy registration (replace with actual registration logic)
         alert('Registration successful!');
-        window.location.href = 'home.html'; // Redirect to home page after registration
+        window.location.href = 'home.html'; 
     });
 });
