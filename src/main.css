@@ -10,7 +10,7 @@ body {
 body.day {
   background: #fff;
   color: #000;
-  transition: background 2s ease;
+  transition: background  2s ease;
 }
 
 .navbar {

@@ -37,7 +37,7 @@ At Medi hub care app,you will be able to;
 
 # link to a live site on github:⛓️
 
-[github](https://github.com/stellarawat/my-final-project?tab=readme-ov-file)
+[github](https://stellarawat.github.io/my-final-project/)
 
 # License 
 
