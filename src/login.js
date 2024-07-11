@@ -1,8 +1,25 @@
 console.log("login.js is loaded");
-
+let userSelection='';
+const body=document.querySelectorAll('body');
 document.addEventListener('DOMContentLoaded', function () {
     console.log("DOM fully loaded and parsed");
+    const day=document.querySelectorAll('dayNight');
+    const night =document.querySelectorAll('daynight');
+    day.addEventListener('click', () => {
+        day.classList.add('before');
+        userSelection='dayNight';
+        body.style.BackgroundColor='yellow';
 
+
+          
+  
+      })
+      night.addEventListener('click', () => {
+        day.classList.add('after');
+        userSelection='dayNight';
+        body.style.BackgroundColor='blue';
+  
+      })
     // Get the form element
     const loginForm = document.getElementById('loginForm');
 
