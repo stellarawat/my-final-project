@@ -3,23 +3,19 @@ let userSelection='';
 const body=document.querySelectorAll('body');
 document.addEventListener('DOMContentLoaded', function () {
     console.log("DOM fully loaded and parsed");
-    const day=document.querySelectorAll('dayNight');
-    const night =document.querySelectorAll('daynight');
-    day.addEventListener('click', () => {
-        day.classList.add('before');
-        userSelection='dayNight';
-        body.style.BackgroundColor='yellow';
-
-
-          
-  
-      })
-      night.addEventListener('click', () => {
-        day.classList.add('after');
-        userSelection='dayNight';
-        body.style.BackgroundColor='blue';
-  
-      })
+    day.addEventListener('change', () => {
+        if (day.checked) {
+            body.classList.add('day');
+            body.classList.remove('night');
+            userSelection = 'dayNight';
+            body.style.backgroundColor = 'yellow';
+        } else {
+            body.classList.add('night');
+            body.classList.remove('day');
+            userSelection = 'dayNight';
+            body.style.backgroundColor = 'blue';
+        }
+    });
     // Get the form element
     const loginForm = document.getElementById('loginForm');
 
